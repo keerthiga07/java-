@@ -1,18 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package ex9;
 
-/**
- *
- * @author keert
- */
-import java.io.*;
+package ex9;
+  import java.io.*;
+
+
+
+   
 public class CBstream {
     public static void main(String[] args)throws IOException
     {
-        try (FileReader sourceStream = new FileReader("C:\\Users\\source\\OneDrive\\Desktop\\IN.txt")) {
+        FileReader sourceStream = null;
+        try {
+            sourceStream = new FileReader("C:\\Users\\Dell\\Desktop\\abc.txt");
             int temp;
             while ((temp = sourceStream.read()) != -1)
             {
@@ -26,13 +24,15 @@ public class CBstream {
             System.out.println(e);
         }
         finally {
+            if (sourceStream != null)
+                sourceStream.close();
             System.out.println("\nCharacter Stream Over\n===================================");
         }
         FileInputStream sourceStream1 = null;
         FileOutputStream targetStream1 = null;
         try {
-            sourceStream1 = new FileInputStream("C:\\Users\\source\\OneDrive\\Desktop\\OUT.txt");
-            targetStream1 = new FileOutputStream("C:\\Users\\source\\OneDrive\\Desktop\\target.txt");
+            sourceStream1 = new FileInputStream("C:\\Users\\Dell\\Desktop\\abc.txt");
+            targetStream1 = new FileOutputStream("C:\\Users\\Dell\\Desktop\\abc.txt");
             int temp;
             while ((temp = sourceStream1.read()) != -1)
                 targetStream1.write((byte)temp);
@@ -41,10 +41,13 @@ public class CBstream {
         finally {
             if (sourceStream1 != null)
                 sourceStream1.close();
- 
+
             if (targetStream1 != null)
                 targetStream1.close();
             System.out.println("\nByte Stream Over\n===================================");
         }
     } 
 }
+  
+    
+
