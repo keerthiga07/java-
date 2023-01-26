@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>image map</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <img src="C:\Users\keert\Documents\NetBeansProjects\Picture1.png" alt="not avaliable" usemap="#user">
+    <map name="user">
+        <area shape="poly"coords="276,270,330,214,284,158,221,180,217,245" href="C:\Users\keert\Documents\NetBeansProjects\newpackage\src\newpackage\black berries.html">
+        <area shape="poly"coords="90,251,157,254,241,323,135,399,66,321" href="‪C:\Users\keert\Documents\NetBeansProjects\red berries html\public_html"> 
+        <area shape="poly"coords="363,22,441,24,463,87,401,122,341,74" href="C:\Users\keert\Documents\NetBeansProjects\newpackage\src\newpackage\apples.html"> 
+    </body>
+    </html>             
+    
+
